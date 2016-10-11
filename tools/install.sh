@@ -9,7 +9,7 @@ diff current_list.txt  $PACKAGES | grep ">" | sed 's/> //g' > diff_list.txt
 rm current_list.txt
 
 #Add the blackarch repos and tools
-curl -O https://blackarch.org/strap.sh 
+curl -O https://blackarch.org/strap.sh -o strap.sh
 chmod +x $HOME/.dotfiles/tools/strap.sh
 sudo $HOME/.dotfiles/tools/strap.sh
 
