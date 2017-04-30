@@ -2,7 +2,7 @@
 
 themes=$HOME/.themes
 icons=$HOME/.icons
-pixmaps=/usr/share/pixmaps
+backgrounds=/usr/share/backgrounds
 lightDM=/etc/lightdm
 config=$HOME/.config
 nitrogen=$HOME/.config/nitrogen
@@ -12,6 +12,9 @@ dotThemes=$HOME/.dotfiles/themes
 
 if [ ! -d $themes ]; then
     mkdir $themes
+fi
+if [ ! -d $backgrounds ]; then
+    mkdir $backgrounds
 fi
 if [ ! -d $icons ]; then
     mkdir $icons
@@ -23,12 +26,13 @@ if [ ! -d $config ]; then
     mkdir $config
 fi
 
-sudo cp -r  $wallpapers $pixmaps/
-sudo cp  $dotThemes/lightdm-gtk-greeter.conf $lightdm/
+sudo cp -r  $wallpapers/* $backgrounds
+#sudo cp  $dotThemes/lightdm-gtk-greeter.conf $lightdm/
 
 
-dotfiles_install_package nitrogen lightdm
+dotfiles_install_package nitrogen
 
+#dotfiles_install_component wallpapers $backgrounds
 dotfiles_install_component .gtkrc-2.0 $HOME/.gtkrc-2.0
 dotfiles_install_component .xinitrc $HOME/.xinitrc
 dotfiles_install_component diehard4 $themes/diehard4
