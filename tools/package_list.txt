@@ -7,10 +7,13 @@ xflux
 gnu-netcat
 openocd
 openssh
-radare2
+radare2-git
 rofi-git
-spotify
-vim
+nessus
+metasploit
+maltego
+nmap
+fluxion
 wine
 wireshark-common
 wireshark-gtk
