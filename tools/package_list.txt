@@ -11,7 +11,7 @@ radare2-git
 rofi-git
 nessus
 metasploit
-maltego
+burp
 nmap
 fluxion
 wine
